@@ -6,7 +6,7 @@
 ![Android Version](https://img.shields.io/badge/Android%20SDK-3.3.5-808080.svg)
 ![iOS Version](https://img.shields.io/badge/iOS%20SDK-3.3.5-808080.svg)
 
-*Updated July 6, 2018*
+*Updated July 18, 2018*
 
 # AdColony SDK Unity Plugin
 - [Requirements](#requirements)

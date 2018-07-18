@@ -6,7 +6,7 @@ AdColony values the open source community and will review all useful changes/add
 
 1. Include a detailed reason for the proposed changes
 2. Follow the project's coding standards
-3. Comply with the [Code of Conduct](#Contributor-Covenant-Code-of-Conduct)
+3. Comply with the [Code of Conduct](#contributor-covenant-code-of-conduct)
 
 # Contributor Covenant Code of Conduct
 
