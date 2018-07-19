@@ -105,7 +105,7 @@ unity_package:
 		-logFile "$(UNITY_LOG_FILE)" \
 		-projectPath "$(UNITY_TEMP_PROJECT_DIR)" \
 		-exportPackage "Assets" "$(UNITY_PACKAGE_FULL_PATH)" \
-		|| @echo "ERROR: Error building unity package, see log: $(UNITY_LOG_FILE)"; \
+		|| echo "ERROR: Error building unity package, see log: $(UNITY_LOG_FILE)"; \
 	else \
 		@echo "ERROR: Unity package not created, looked for Unity at $(UNITY_BINARY)."; \
 	fi;

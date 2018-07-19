@@ -26,6 +26,7 @@
 
 # Requirements
 - Mac OS *(feel free to add Windows support and make a pull request!)*
+    - Case-insensitive file system, see Unity issues: [feedback.unity3d.com](https://feedback.unity3d.com/suggestions/editor-support-casesensitive-f), [forum.unity.com](https://forum.unity.com/threads/is-unity-ever-going-to-support-a-case-sensitive-filesystem.412139/) 
 - [Unity 5.x+](https://unity3d.com/get-unity/download)
 - [Android SDK](https://developer.android.com/studio/#downloads)
 
