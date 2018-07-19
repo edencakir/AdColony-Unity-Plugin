@@ -6,7 +6,7 @@ IOS_DIR := $(SDK_DIR)/$(IOS_REPO_NAME)
 ANDROID_DIR := $(SDK_DIR)/$(ANDROID_REPO_NAME)
 ANDROID_FINAL_JAR := $(ANDROID_DIR)/Library/adcolony.jar
 ANDROID_FINAL_WRAPPER_DIR := $(UNITY_PLUGIN_DIR)/src/android
-ANDROID_FINAL_WRAPPER_JAR := $(UNITY_PLUGIN_DIR)/src/android/library/build/outputs/jar/adcolony-wrapper.jar
+ANDROID_FINAL_WRAPPER_JAR := $(UNITY_PLUGIN_DIR)/src/android/Library/build/outputs/jar/adcolony-wrapper.jar
 UNITY_PACKAGE_FULL_PATH := $(UNITY_PLUGIN_DIR)/AdColony.unitypackage
 UNITY_TEMP_PROJECT_DIR := $(UNITY_PLUGIN_DIR)/tempunitypackage
 UNITY_BINARY := /Applications/Unity/Unity.app/Contents/MacOS/Unity
@@ -30,6 +30,7 @@ ios:
 
 	@# Move to plugin folder
 	rm -rf "$(UNITY_PLUGIN_DIR)/Assets/Plugins/iOS/AdColony/AdColony.framework"
+	mkdir -p "$(UNITY_PLUGIN_DIR)/Assets/Plugins/iOS/AdColony"
 	cp -r "$(IOS_DIR)/AdColony.framework" "$(UNITY_PLUGIN_DIR)/Assets/Plugins/iOS/AdColony"
 	rm -rf "$(UNITY_PLUGIN_DIR)/Assets/Plugins/iOS/AdColony/AdColony.framework/Versions"
 
@@ -51,14 +52,14 @@ clean_android_jar:
 	find "$(UNITY_PLUGIN_DIR)/Assets/Plugins/Android/libs" -name "libjs.so" -exec rm "{}" +
 
 android_wrapper: android_jar
-	cp "$(ANDROID_FINAL_JAR)" "$(ANDROID_FINAL_WRAPPER_DIR)/library/libs/AdColony.jar"
-	cp -r "$(ANDROID_DIR)/Library"/* "$(ANDROID_FINAL_WRAPPER_DIR)/library/libs"
+	cp "$(ANDROID_FINAL_JAR)" "$(ANDROID_FINAL_WRAPPER_DIR)/Library/libs/AdColony.jar"
+	cp -r "$(ANDROID_DIR)/Library"/* "$(ANDROID_FINAL_WRAPPER_DIR)/Library/libs"
 	cd "$(ANDROID_FINAL_WRAPPER_DIR)" && ./gradlew clean && ./gradlew makeJar
 
 clean_android_wrapper:
 	rm -rf "$(ANDROID_FINAL_WRAPPER_DIR)/build"
 	rm -rf "$(ANDROID_FINAL_WRAPPER_DIR)/Library/build"
-	rm -f "$(ANDROID_FINAL_WRAPPER_DIR)/library/libs/AdColony.jar"
+	rm -f "$(ANDROID_FINAL_WRAPPER_DIR)/Library/libs/AdColony.jar"
 	rm -f "$(UNITY_PLUGIN_DIR)/Assets/Plugins/Android/AdColony/libs/AdColonyUnityWrapper.jar"
 	find "$(ANDROID_FINAL_WRAPPER_DIR)/Library/libs" -name "libadcolony.so" -exec rm "{}" +
 	find "$(ANDROID_FINAL_WRAPPER_DIR)/Library/libs" -name "libjs.so" -exec rm "{}" +
