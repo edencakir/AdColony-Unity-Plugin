@@ -9,7 +9,6 @@ Plugin/src/android/Library/libs/
 Plugin/src/android/Library/gen
 Plugin/src/android/Library/local.properties
 Plugin/Assets/Plugins/Android/libs/
-Plugin/Assets/Plugins/iOS/AdColony*
 Plugin/src/android/.settings/
 Plugin/src/android/Library/.classpath
 Plugin/src/android/Library/.settings/
