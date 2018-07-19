@@ -30,7 +30,6 @@ ios:
 
 	@# Move to plugin folder
 	rm -rf "$(UNITY_PLUGIN_DIR)/Assets/Plugins/iOS/AdColony/AdColony.framework"
-	mkdir -p "$(UNITY_PLUGIN_DIR)/Assets/Plugins/iOS/AdColony"
 	cp -r "$(IOS_DIR)/AdColony.framework" "$(UNITY_PLUGIN_DIR)/Assets/Plugins/iOS/AdColony"
 	rm -rf "$(UNITY_PLUGIN_DIR)/Assets/Plugins/iOS/AdColony/AdColony.framework/Versions"
 
