@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "26.0.0"
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
     }
@@ -20,7 +20,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
 
 task clearJar(type: Delete) {
@@ -31,10 +31,10 @@ task clearJar(type: Delete) {
  * Creates a standalone .jar by simply renaming the classes.jar
  */
 task makeJar(type: Copy) {
-    from('build/intermediates/bundles/release/') // Moves into ADCTest/sdk/build/libs currently
+    from('build/intermediates/packaged-classes/release/')
     into('build/outputs/jar/')
     include('classes.jar')
-    rename ('classes.jar', 'adcolony-wrapper.jar') // Will rename file later
+    rename ('classes.jar', 'adcolony-wrapper.jar')
 }
 
 makeJar.dependsOn(clearJar, build)
