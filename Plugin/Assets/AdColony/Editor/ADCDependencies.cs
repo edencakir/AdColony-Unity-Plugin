@@ -68,7 +68,7 @@ public class ADCDependencies : AssetPostprocessor {
       new object[] {
       "com.google.android.gms",
       "play-services-ads",
-      "9.+" },
+      "15.+" },
       namedArgs: new Dictionary<string, object>() {
           {"packageIds", new string[] { "extra-google-m2repository" } }
       });
