@@ -110,7 +110,7 @@ In this case, the app id, `app4c2e4129ea7ce`, and zone id, `z4c2e422e48151` shou
 4. The Plugins/Android/AdColony/AndroidManifest.xml file is automatically generated. To update manually, select "Tools"->"AdColony"->"Update AndroidManifest.xml".
 
 #### Upgrading from SDK 3.0.x:
-In order to support thin/fat Android builds, we moved the native .so files from the `Plugins/Android/AdColony/libs` folder to the `Plugins/Android/libs` folder. Removing the `Plugins/Android/AdColony` folder before importing is recommended.
+In order to support thin/fat Android builds, we moved the native .so files from the `Plugins/Android/AdColony/libs` folder to the `Plugins/Android/libs` folder. Removing the `Plugins/Android/AdColony/libs` folder before importing is recommended.
 
 #### Upgrading from SDK 2.x:
 Please note that updating from our 2.x Unity Plugin is not a drag and drop update, but rather includes breaking API and process changes. In order to take advantage of the 3.x Unity Plugin, please remove the older plugin before installing.
